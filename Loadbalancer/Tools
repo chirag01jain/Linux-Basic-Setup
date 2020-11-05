@@ -17,7 +17,6 @@ Example:
 
 Example: Test with 500 concurrent requests for 5 seconds.
 
-```
-siege -q -t 5S -c 500 http://dl.cjain.biz/
-```
+
+> siege -q -t 5S -c 500 http://dl.cjain.biz/
 
