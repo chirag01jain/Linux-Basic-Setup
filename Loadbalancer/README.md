@@ -28,14 +28,37 @@ curl -X POST -H “Content-Type: application/json” -H “Authorization: Bearer
 ```
 1. sudo apt update
 2. apt install nginx
-3. sudo mkdir -p /var/www/lb1.cjain.biz/html
-4. sudo chmod -R 755 /var/www/lb1.cjain.biz
-5. sudo vim /var/www/lb1.cjain.biz/html/index.html 
-6. sudo vim /etc/nginx/sites-available/lb1.cjain.biz
-7. sudo ln -s /etc/nginx/sites-available/lb1.cjain.biz /etc/nginx/sites-enabled/
-8. sudo vim /etc/nginx/nginx.conf
+3. sudo mkdir -p /var/www/dl.cjain.biz/html
+4. sudo chmod -R 755 /var/www/dl.cjain.biz
+5. sudo vim /var/www/dl.cjain.biz/html/index.html 
+6. sudo vim /etc/nginx/sites-available/dl.cjain.biz
+7. sudo ln -s /etc/nginx/sites-available/dl.cjain.biz /etc/nginx/sites-enabled/
+8. sudo vim /etc/nginx/nginx.conf (Uncomment hash_bucket)
 9. sudo nginx -t
 10. sudo systemctl restart nginx
 ```
 
+Configuration block #5:
+
+```
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /var/www/example.com/html;
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name example.com www.example.com;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
+```
+
+##### Create a SSL certificate using Let's encrypt (for passthrough):
+```
+1) sudo add-apt-repository ppa:certbot/certbot
+2) 
+```
 Follow guide for more details: https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
