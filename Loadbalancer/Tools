@@ -1,0 +1,16 @@
+### Tools for testing Load balancer connectivity
+
+1) Install Apache bench for load testing and benchmarking LB performance:
+
+```
+1) Deploy a Ubuntu 18.04 server
+2) apt-get update
+3) apt-get install apache2-utils
+4) ab -V
+```
+
+Examples:
+
+##### Send 5000 requests with the concurrency of 5K
+
+ab -n 5000 -c 500 http://dl.cjain.biz/
