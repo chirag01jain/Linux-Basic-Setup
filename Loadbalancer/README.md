@@ -48,7 +48,7 @@ server {
         root /var/www/example.com/html;
         index index.html index.htm index.nginx-debian.html;
 
-        server_name example.com www.example.com;
+        server_name dl.cjain.biz www.dl.cjain.biz;
 
         location / {
                 try_files $uri $uri/ =404;
@@ -58,7 +58,8 @@ server {
 
 ##### Create a SSL certificate using Let's encrypt (for passthrough):
 ```
-1) sudo add-apt-repository ppa:certbot/certbot
-2) 
+1) sudo add-apt-repository ppa:certbot/certbot (Add repo)
+2) sudo apt install python-certbot-nginx (Install certificate)
+3) sudo certbot --nginx -d dl.cjain.biz -d www.example.com (Obtain the certificate) - Certbox will make all the configuration)
 ```
 Follow guide for more details: https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
