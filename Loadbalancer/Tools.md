@@ -10,7 +10,9 @@
 
 Example:
 
-##### Send 5000 requests (-n) with the concurrency (-c) of 5K :: ```ab -n 5000 -c 500 http://dl.cjain.biz/```
+##### Send 5000 requests (-n) with the concurrency (-c) of 5K :: 
+
+> ab -n 5000 -c 500 http://dl.cjain.biz/
 
 #### 2) Install seige ::  HTTP load test utility supported on UNIX
 
