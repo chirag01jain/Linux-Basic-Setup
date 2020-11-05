@@ -8,14 +8,12 @@
 4) ab -V
 ```
 
-Example:
-
-##### Send 5000 requests (-n) with the concurrency (-c) of 5K :: 
+Example: Send 5000 requests (-n) with the concurrency (-c) of 5K: 
 
 > ab -n 5000 -c 500 http://dl.cjain.biz/
 
 #### 2) Install seige ::  HTTP load test utility supported on UNIX
 
-Example: Test with 500 concurrent requests for 5 seconds.
+Example: Send 500 concurrent requests for 5 seconds:
 > siege -q -t 5S -c 500 http://dl.cjain.biz/
 
